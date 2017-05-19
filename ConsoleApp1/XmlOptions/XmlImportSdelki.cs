@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ConsoleApp1.XmlOptions
+namespace XmlReader.XmlOptions
 {
     class XmlImportSdelki
     {

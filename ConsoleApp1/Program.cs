@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.MenuAll;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,13 +44,13 @@ namespace XmlReader
                             MenuClients.MClient();
                             break;
                         case 3:
-                            
+                            MenuSotrudniki.MSotrudnik();
                             break;
                         case 4:
-                           
+                            MenuSdelki.MSdelki();
                             break;
                         case 5:
-                           
+                            MenuDostup.MDostup();
                             break;
                         default:
                             throw new Exception("Некорректное число, попробуйте еще раз!");
