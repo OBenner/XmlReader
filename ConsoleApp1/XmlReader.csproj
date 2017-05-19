@@ -57,11 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Action\xmlAction.cs" />
+    <Compile Include="MenuAll\MenuAuto.cs" />
+    <Compile Include="MenuAll\MenuClients.cs" />
+    <Compile Include="MenuAll\MenuDostup.cs" />
+    <Compile Include="MenuAll\MenuSdelki.cs" />
+    <Compile Include="MenuAll\MenuSotrudniki.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlOptions\XmlExporttAuto.cs" />
-    <Compile Include="XmlOptions\XmlImport.cs" />
+    <Compile Include="XmlOptions\XmlImportAuto.cs" />
+    <Compile Include="XmlOptions\XmlImportClients.cs" />
+    <Compile Include="XmlOptions\XmlImportDostup.cs" />
+    <Compile Include="XmlOptions\XmlImportSdelki.cs" />
+    <Compile Include="XmlOptions\XmlImportSotrudniki.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

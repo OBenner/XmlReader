@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XmlReader.MenuAll;
+
 
 namespace XmlReader
 
@@ -11,81 +13,64 @@ namespace XmlReader
     {
         static void Main(string[] args)
         {
-
-            Xml.XmlImport.ReadFile();
-
-            if (DbElement.instanceList.Keys.Count <= 0)
+             
+        bool menu = true;
+            while (menu)
             {
-                Console.WriteLine("Нет файла импорта");
-                return;
-            }
-
-            Menu();
-        }
-
-        // Меню 
-        public static void Menu()
-        {
-
-            bool show = true;
-
-            while (show)
-            {
-                Console.WriteLine("***Меню***");
-                Console.WriteLine("Выберите действие:");
-                int i = 0;
-
-                foreach (var elem in DbElement.instanceList.Keys)
-                {
-                    i++;
-                    Console.WriteLine(i + ". " + elem);
-                }
-
-                i++;
-                Console.WriteLine(i + ". Export");
-                i++;
-                Console.WriteLine(i + ". Exit");
-
+                Console.WriteLine();
+                Console.WriteLine("Выберите соответствующую таблицу: ");
+                Console.WriteLine("1. Автомобили");
+                Console.WriteLine("2. Клиенты");
+                Console.WriteLine("3. Сотрудники");
+                Console.WriteLine("4. Сделки");
+                Console.WriteLine("5. Доступность автомобилей");
+                Console.WriteLine();
                 try
                 {
                     string answer = Console.ReadLine();
-
                     int resultOut;
 
                     if (!int.TryParse(answer, out resultOut))
-                        throw new Exception("Не корректные данные");
+                        throw new Exception("Не корректные данные, попробуйте еще раз!");
+                        Console.WriteLine();
 
-                    DbElement menu = new DbElement();
-
-                    int x = 0;
-
-                    foreach (var elem in DbElement.instanceList.Keys)
+                    switch (resultOut)
                     {
-                        x++;
-                        if (x == resultOut)
-                            menu.Menu(elem);
+                        case 1:
+                            MenuAuto.MAuto();
+                            break;
+                        case 2:
+                            MenuClients.MClient();
+                            break;
+                        case 3:
+                            
+                            break;
+                        case 4:
+                           
+                            break;
+                        case 5:
+                           
+                            break;
+                        default:
+                            throw new Exception("Некорректное число, попробуйте еще раз!");
+                           
                     }
-
-                    x++;
-                    if (x == resultOut) Xml.XmlExport.ExportData();
-                    x++;
-                    if (x == resultOut) show = false;
-
-
 
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    Console.WriteLine("Не корректные данные, попробуйте еще раз!");
+                    Console.WriteLine();
                 }
+
+
             }
 
-        }
+            
 
-
-    }
-}
+           
 
         }
     }
 }
+
