@@ -104,12 +104,12 @@ namespace XmlReader.XmlOptions
 
 
             // Добавление нового
-            public void AddAuto()
+            public void AddClient()
             {
             var id_client = 1;
                 Console.WriteLine("Введите ФИО клиента");            
                 var fio = Console.ReadLine();
-                Console.WriteLine("Введите дату выпуска автомобиля");
+                Console.WriteLine("Введите данные предоставляемого документа");
                 var docum = Console.ReadLine();
                 XDocument xd = XDocument.Load(sourcePath);
                 xd.Root.Add(

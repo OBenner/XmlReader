@@ -83,7 +83,7 @@ namespace XmlReader.MenuAll
                                 Console.WriteLine("8. Назад");
                                 Console.WriteLine();
                                     string x = Console.ReadLine();
-                                  int  y = int.Parse(x)  ;     
+                                    int  y = int.Parse(x)  ;     
                                     switch (y)
                                     {
 

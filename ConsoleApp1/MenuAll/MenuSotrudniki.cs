@@ -131,7 +131,7 @@ namespace XmlReader.MenuAll
                                         string dat = Console.ReadLine();
                                         try
                                         {
-                                            a.doljnost = dat;
+                                            a.data_priema = dat;
                                             sot.DatalUpdateSotrudnik(a);
                                         }
                                         catch (Exception e)

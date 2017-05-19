@@ -36,7 +36,7 @@ namespace XmlReader.XmlOptions
     //метод разбора файл и сохранения в  List<Auto> autos
     public List<Dospup> ParceDostup()
     {
-        XElement doc1 = XElement.Load("Dospup.xml");
+        XElement doc1 = XElement.Load("Dostup.xml");
         IEnumerable<XElement> elements = doc1.Elements();
 
         dostup.Clear();
@@ -71,7 +71,7 @@ namespace XmlReader.XmlOptions
     // Удаление
     public void DeleteDostup(Dospup a)
     {
-        XElement doc = XElement.Load("Dospup.xml");
+        XElement doc = XElement.Load("Dostup.xml");
         IEnumerable<XElement> elements = doc.Elements();
 
         XElement update = null;
@@ -160,7 +160,7 @@ namespace XmlReader.XmlOptions
     // изменение доступности автомобиля
     public void FreeUpdateDostup(Dospup a)
     {
-        XElement doc = XElement.Load("Dospup.xml");
+        XElement doc = XElement.Load("Dostup.xml");
         IEnumerable<XElement> elements = doc.Elements();
 
         XElement update = null;

@@ -38,7 +38,7 @@ namespace XmlReader.MenuAll
                             cl.ReadFile();
                             break;
                         case 2:
-                            cl.AddAuto();
+                            cl.AddClient();
                             break;
                         case 3:
                             Clients a = null;

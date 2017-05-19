@@ -124,12 +124,9 @@ namespace XmlReader.MenuAll
                                         catch (Exception e)
                                         {
                                             Console.WriteLine("Не корректные данные, попробуйте еще раз!");
-                                            Console.WriteLine();
+                                          //  Console.WriteLine(e.StackTrace);
                                         }
                                         break;
-
-
-
                                     case 4:
                                         dos.DeleteDostup(a);
                                         break;
@@ -152,6 +149,7 @@ namespace XmlReader.MenuAll
                 }
                 catch (Exception e)
                 {
+                  //  Console.WriteLine(e.StackTrace);
                     Console.WriteLine("Некорректно введенные данные!");
                 }
 
